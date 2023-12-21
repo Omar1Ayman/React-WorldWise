@@ -8,15 +8,14 @@ import { useAuth } from "../context/FakeAuthContext";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [email, setEmail] = useState("omar@gmail.com");
-  const [password, setPassword] = useState("123456");
-  const { login, isAuthenticated, user } = useAuth();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { login, isAuthenticated, user, error } = useAuth();
   const navigate = useNavigate();
 
   const HandelSubmitLognin = (e) => {
     e.preventDefault();
-    console.log("first");
-    if (email && password) login(email, password);
+    login(email, password);
   };
   useEffect(
     function () {
@@ -50,6 +49,10 @@ const Login = () => {
               type="password"
               onChange={(e) => setPassword(e.target.value)}
             />
+          </div>
+          <div className="form-col">
+            {/* Your component JSX */}
+            {error && <div style={{ color: "red" }}>{error}</div>}
           </div>
           <div className="form-col">
             <Button type="submit" variant="outlined">

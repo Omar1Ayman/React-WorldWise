@@ -1,124 +1,25 @@
 {
   "users": [
     {
-      "id": 1,
-      "email": "omar@gmail.com",
-      "password": "123456",
-      "username": "omar"
-    },
-    {
-      "id": 2,
-      "email": "o@gmail.com",
-      "password": "123456",
-      "username": "omar"
-    },
-    {
-      "email": "om@gmail.com",
-      "password": "123456",
-      "username": "Elbasuony",
-      "id": 3
-    },
-    {
-      "email": "omar@gmail.com",
-      "password": "123456",
-      "username": "omar",
-      "id": 4
-    },
-    {
-      "email": "omar@gmail.com",
-      "password": "123456",
-      "username": "omar",
-      "id": 5
-    },
-    {
-      "email": "omar@gmail.com",
-      "password": "123456",
-      "username": "omar",
-      "id": 6
-    },
-    {
-      "email": "omar2@gmail.com",
-      "password": "123456",
-      "username": "omar",
-      "id": 7
-    },
-    {
-      "email": "oma@gmail.com",
-      "password": "123456",
-      "username": "omar",
-      "id": 8
-    },
-    {
-      "email": "s@g.c",
-      "password": "123456",
-      "username": "oma",
-      "id": 9
-    },
-    {
-      "email": "s@gmail.com",
+      "email": "u1@g.com",
       "password": "123",
-      "username": "ads",
-      "id": 10
-    },
-    {
-      "email": "new@gmail.com",
-      "password": "123",
-      "username": "new",
-      "id": 11
+      "username": "user1",
+      "id": 1
     }
   ],
   "cities": [
     {
-      "cityName": "Alhendin",
-      "country": "Spain",
-      "date": "2023-12-21T17:12:44.260Z",
-      "emoji": "🇪🇸",
-      "notes": "omar",
+      "cityName": "El Menia",
+      "country": "Algeria",
+      "date": "2023-12-21T19:26:16.505Z",
+      "emoji": "🇩🇿",
+      "notes": "Test",
       "userID": 1,
       "position": {
-        "lat": "37.10108914403309",
-        "lng": "-3.667152419463395"
+        "lat": "31.531264065895442",
+        "lng": "3.2055071733110188"
       },
       "id": 1
-    },
-    {
-      "cityName": "Alexandria",
-      "country": "Egypt",
-      "date": "2023-12-21T18:05:16.811Z",
-      "emoji": "🇪🇬",
-      "notes": "",
-      "userID": 1,
-      "position": {
-        "lat": "2.8418702378873784",
-        "lng": "41.06258019778746"
-      },
-      "id": 2
-    },
-    {
-      "cityName": "Alexandria",
-      "country": "Egypt",
-      "date": "2023-12-21T18:18:24.303Z",
-      "emoji": "🇪🇬",
-      "notes": "ss",
-      "userID": 1,
-      "position": {
-        "lat": "1.8632525959460944",
-        "lng": "41.22803165414138"
-      },
-      "id": 4
-    },
-    {
-      "cityName": "Alexandria",
-      "country": "Egypt",
-      "date": "2023-12-21T18:18:24.303Z",
-      "emoji": "🇪🇬",
-      "notes": "sdf",
-      "userID": 1,
-      "position": {
-        "lat": "38.07315309209079",
-        "lng": "1.4498984335400755"
-      },
-      "id": 5
     }
   ]
 }

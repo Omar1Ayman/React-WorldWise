@@ -6,7 +6,7 @@ const initialState = {
   users: [],
   user: null,
   isAuthenticated: false,
-  err: "",
+  error: "",
 };
 function reducer(state, action) {
   switch (action.type) {
@@ -39,7 +39,7 @@ function reducer(state, action) {
     case "rejected":
       return {
         ...state,
-        err: action.payload,
+        error: action.payload,
       };
     default:
       throw new Error("Invalid action");
@@ -47,7 +47,7 @@ function reducer(state, action) {
 }
 
 const AuthProvider = ({ children }) => {
-  const [{ user, isAuthenticated, users, err }, dispatch] = useReducer(
+  const [{ user, isAuthenticated, users, error }, dispatch] = useReducer(
     reducer,
     initialState
   );
@@ -65,10 +65,18 @@ const AuthProvider = ({ children }) => {
     fetchUsers();
   }, []);
   function login(email, password) {
-    const checkUser = users.filter(
-      (user) => user.email === email && user.password === password
-    );
-    if (checkUser) dispatch({ type: "LOGIN", payload: checkUser[0] });
+    if (email && password) {
+      const checkUser = users.filter(
+        (user) => user.email === email && user.password === password
+      );
+      if (checkUser.length > 0) {
+        dispatch({ type: "LOGIN", payload: checkUser[0] });
+      } else {
+        dispatch({ type: "rejected", payload: "Invalid email or password" });
+      }
+    } else {
+      dispatch({ type: "rejected", payload: "You should fill in all inputs" });
+    }
   }
 
   async function register(newUser) {
@@ -105,6 +113,7 @@ const AuthProvider = ({ children }) => {
         users,
         dispatch,
         register,
+        error,
       }}
     >
       {children}
