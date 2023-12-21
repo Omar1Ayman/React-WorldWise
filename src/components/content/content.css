@@ -1,0 +1,22 @@
+.content {
+  height: calc(100% - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .text {
+    width: 50%;
+    text-align: center;
+    h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      line-height: 30px;
+      margin: 15px 0;
+    }
+  }
+}

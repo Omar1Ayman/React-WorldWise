@@ -1,0 +1,45 @@
+nav {
+  font-weight: bold;
+  height: 50px;
+  width: 100%;
+  .wrapper {
+    padding: 15px 0;
+    margin: auto;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      span {
+        letter-spacing: 5px;
+        font-size: 25px;
+      }
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      li {
+        font-weight: bold;
+        cursor: pointer;
+        a {
+          border-radius: 10px;
+          padding: 10px 20px;
+          text-decoration: none;
+          color: inherit;
+          font-size: 15px;
+          background-color: transparent;
+          transition: all 0.5s ease-in-out;
+        }
+        a.active {
+          background: #d97a0e;
+        }
+      }
+      li:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
